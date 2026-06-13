@@ -79,7 +79,7 @@ Return ONLY a valid JSON object with this EXACT structure (no markdown, no extra
   ]
 }`;
 
-  const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+  const model = genAI.getGenerativeModel({ model: 'gemini-3.5-flash' });
   const result = await model.generateContent(prompt);
   const rawText = result.response.text();
   const cleanText = stripMarkdown(rawText);
